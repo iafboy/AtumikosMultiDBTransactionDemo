@@ -1,8 +1,12 @@
 # 主要实现atomikos数据库分布式事物。
 ## atomikos介绍
 Atomikos TransactionsEssentials 是一个为Java平台提供增值服务的并且开源类事务管理器，它是一个非常快速的嵌入式事务管理器，这就意味着，不需要另外启动一个单独的事务管理器进程
-开源版本中的一些功能：
 
+Atomikos也包涵商业软件访问地址为https://www.atomikos.com/
+
+springboot官方文档也提出支持Atomikos，并给出例子，具体请参考https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-jta.html 
+
+开源版本中的一些功能：
 l.全面崩溃 / 重启恢复
 
 2.兼容标准的SUN公司JTA API
