@@ -17,6 +17,11 @@ l.全面崩溃 / 重启恢复
 
 ## 准备工作
 application.properties里配置，使用的是oracle数据库，这里需要建立两个库，然后在两个库里面分别执行users.sql创建user表
+
+数据库测试可以使用docker版，运行命令为 docker run -d -it --name <oracle-db> store/oracle/database-enterprise:12.2.0.1
+使用sqlplus sys/Oradoc_db1@ORCLCDB as sysdba登录db，并创建用户
+
+
 ## 测试
 启动App.java之后，在postman里访问IndexController里的接口
 ## 接口列表
