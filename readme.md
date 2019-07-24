@@ -15,6 +15,11 @@ l.全面崩溃 / 重启恢复
 
 4.为XA和非XA提供内置的JDBC适配器
 
+## 场景
+调用REST API分别向两个DB的user表写入同样的数据，2个服务如果都成功，则分别两个数据库都有数据。否则其中一个出错，则写入两个数据库的数据全部回滚
+
+例子中用docker建立一个数据库，采用两个不同用户名的方式模拟写入两个库（与两个db实例效果相同）,其中API insertTwoDBs为同时写入成功，insertTwoDBsWithError中一个操作会模拟触发异常，然后数据全部回滚
+
 ## 准备工作
 application.properties里配置，使用的是oracle数据库，这里需要建立两个库，然后在两个库里面分别执行users.sql创建user表
 
